@@ -1,0 +1,159 @@
+/* src/styles/product-modal.css */
+.pm-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pm-card {
+  width: min(900px, 96%);
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: scaleIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.pm-close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  background: #f3f4f6;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.pm-close:hover {
+  background: #e5e7eb;
+  transform: rotate(90deg);
+}
+
+.pm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.pm-image {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.pm-info h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.6rem;
+  color: #333;
+  line-height: 1.3;
+}
+
+.pm-info .muted {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.pm-desc {
+  color: #555;
+  font-size: 0.95rem;
+  margin: 16px 0;
+  line-height: 1.6;
+}
+
+.pm-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.price {
+  font-weight: 900;
+  font-size: 1.6rem;
+  background: linear-gradient(135deg, #ff9900 0%, #ffa41c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pm-bottom button {
+  background: linear-gradient(135deg, #ff9900 0%, #ffb84d 100%);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #131921;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 153, 0, 0.3);
+  font-size: 0.95rem;
+}
+
+.pm-bottom button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 153, 0, 0.4);
+}
+
+.pm-bottom button:active {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .pm-card {
+    padding: 16px;
+  }
+
+  .pm-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pm-image {
+    height: 300px;
+  }
+
+  .pm-info h2 {
+    font-size: 1.3rem;
+  }
+
+  .price {
+    font-size: 1.3rem;
+  }
+}

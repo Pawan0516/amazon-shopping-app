@@ -1,0 +1,10 @@
+.aa-root { position: relative; }
+.aa-root input {
+  width: 100%; padding: 10px 12px; border-radius:8px; border:1px solid #e6e6e9; outline:none;
+}
+.aa-list {
+  position: absolute; top: calc(100% + 8px); left:0; right:0; background:#fff; box-shadow:0 12px 30px rgba(6,10,20,0.08);
+  border-radius:8px; overflow:hidden; z-index:40; max-height:220px; overflow-y:auto;
+}
+.aa-list li { padding:10px 12px; cursor:pointer; border-bottom:1px solid #f3f3f4; }
+.aa-list li:hover { background:#faf7ef; }

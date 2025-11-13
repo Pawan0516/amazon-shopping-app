@@ -1,0 +1,44 @@
+.mock-sms-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.mock-sms {
+  background: #fff;
+  width: 360px;
+  max-width: 94vw;
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.mock-sms-header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 16px;
+  border-bottom:1px solid #eee;
+  background: linear-gradient(90deg,#fff,#fff);
+}
+
+.mock-sms-header h3 { margin: 0; font-size:1rem; }
+
+.mock-sms-body { padding: 14px 16px; color: #333; }
+
+.mock-sms-body p { margin: 8px 0; }
+
+.mock-sms-actions { display:flex; gap:8px; padding:12px 16px; border-top:1px solid #f0f0f0; }
+
+.btn { padding:8px 12px; border-radius:6px; border:none; cursor:pointer; background:#f3f4f6; font-weight:600 }
+
+.btn.danger { background: #ffebee; color:#c62828 }
+
+.muted { color:#888; font-size:0.85rem }
+
+.close { background:transparent; border:none; font-size:1.4rem; cursor:pointer }
